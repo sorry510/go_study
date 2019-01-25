@@ -8,6 +8,9 @@ const NUM int = 3
 
 func main() {
 	var a = [] int {1, 2, 3}
+
+    fmt.Println(a[1:2]) // 切片
+
 	var ptr [NUM] *int
 
 	for i := 0; i < NUM; i++ {

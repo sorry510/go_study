@@ -5,10 +5,16 @@ import "fmt"
 // 指针
 func main() {
 	a := 2.9
-	var fp *float64    /* 指向浮点型 */
-	fp = &a
+	var ptr * float64    /* 指向浮点型 */
+    var pptr ** float64 //指针的指针
+	ptr = &a
+    pptr = &ptr
 
-	fmt.Println(&a)
-	fmt.Println(fp)
-	fmt.Println(*fp)
+    if(ptr != nil) {
+        fmt.Println(&ptr)
+        fmt.Println(ptr)
+        fmt.Println(*ptr)
+        fmt.Println(*pptr)
+        fmt.Println(**pptr)
+    }
 }

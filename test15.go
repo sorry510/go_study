@@ -7,20 +7,20 @@ import (
 // interface
 
 type Man interface {
-	name() string
+	name(pre string) string
 	age() int
 }
 
 type Woman struct {
+	flag string
 	height int
 	id int
 	city string
 	fire bool
 }
 
-func (woman Woman) name() string {
-	fmt.Println(woman)
-	return "Helli"
+func (woman Woman) name(pre string) string {
+	return woman.flag + " " + pre + " world"
 }
 
 func (woman Woman) age() int {
@@ -28,11 +28,10 @@ func (woman Woman) age() int {
 }
 
 func main() {
-	var man1,man2 Man
-	woman := Woman{height: 15, id: 1, city: "newyork"}
-	woman.fire = true
-	man1 = new(Woman)
-	man2 = woman
-	fmt.Println(man1.name())
-	fmt.Println(man2.name())
+	man1 := new(Woman)
+	fmt.Println(man1.name("hello"))
+
+	man2 := Woman{height: 15, id: 1, city: "newyork", flag: "nv"}
+	man2.fire = true
+	fmt.Println(man2.name("not"))
 }
