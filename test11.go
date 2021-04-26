@@ -21,6 +21,7 @@ type Man struct {
     age int
     sex string
     job Job
+    book Books
 }
 
 
@@ -42,14 +43,17 @@ func main() {
 	book1.book_id = 6495407
 	fmt.Println(book1)
 
-    var man1 Man
+    
     var job1 Job
     str := "hello"
     job1 = Job{"yuan", str, 5555.0}
     job1.name = "yuan2"
+
+    var man1 Man
     man1.name = "simple"
     man1.age = 30
     man1.sex = "man"
     man1.job = job1
+    man1.book = book1
     fmt.Println(man1)
 }

@@ -17,7 +17,7 @@ var ptr *int
 
 func main() {
     // &地址
-	// println(&c, &d)
+	println(&c, &d)
     ptr = &e
     // println(reflect.TypeOf(f))
     println(*ptr)

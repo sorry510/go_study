@@ -12,7 +12,7 @@ var (
 )
 
 // 函数使用
-func max(a, b int) int {
+func max(a int, b int) int {
 	if a > b {
 		return a
 	}

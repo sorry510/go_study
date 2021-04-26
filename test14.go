@@ -21,7 +21,11 @@ func main() {
 	map3["a"] = "test3"
 	fmt.Println(map3)
 
-	var map4 = map[string]string{}
+	var map4 = map[string]string{"apple": "red", "banana": "yellow", "orange": "orange"}
 	map4["a"] = "test4"
 	fmt.Println(map4)
+
+	var map5 = map[string]int{"a": 1, "b": 2, "c": 3}
+	delete(map5, "a")
+	fmt.Println(map5)
 }

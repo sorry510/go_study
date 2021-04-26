@@ -10,10 +10,10 @@ func main() {
 	ptr = &a
     pptr = &ptr
 
-    if(ptr != nil) {
-        fmt.Println(&ptr)
-        fmt.Println(ptr)
-        fmt.Println(*ptr)
+    if(ptr != nil) { //nil 空指针
+        fmt.Println(&ptr) // 指针的地址
+        fmt.Println(ptr) // 地址
+        fmt.Println(*ptr) // 值
         fmt.Println(*pptr)
         fmt.Println(**pptr)
     }

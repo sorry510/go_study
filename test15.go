@@ -7,31 +7,40 @@ import (
 // interface
 
 type Man interface {
-	name(pre string) string
-	age() int
+	setName(name string)
+	getName(pre string) string
+	setAge(age int)
+	getAge() int
 }
 
-type Woman struct {
-	flag string
-	height int
-	id int
-	city string
-	fire bool
+type Child struct {
+	name string
+	age  int
 }
 
-func (woman Woman) name(pre string) string {
-	return woman.flag + " " + pre + " world"
+// go 不支持默认参数
+func (self *Child) setName(name string) {
+	self.name = name
 }
 
-func (woman Woman) age() int {
-	return 18
+func (self *Child) getName(pre string) string {
+	return pre + self.name
+}
+
+func (self *Child) setAge(age int) {
+	self.age = age
+}
+
+func (self *Child) getAge() int {
+	return self.age
 }
 
 func main() {
-	man1 := new(Woman)
-	fmt.Println(man1.name("hello"))
+	man1 := new(Child)
+	man1.setAge(10)
+	man1.setName("kelly")
+	fmt.Println(man1.getName("little "), man1.getAge())
 
-	man2 := Woman{height: 15, id: 1, city: "newyork", flag: "nv"}
-	man2.fire = true
-	fmt.Println(man2.name("not"))
+	// man2 := Child{name: "wu", age: 8}
+	// fmt.Println(man2.getName(), man2.getAge())
 }
