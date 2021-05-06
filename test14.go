@@ -28,4 +28,11 @@ func main() {
 	var map5 = map[string]int{"a": 1, "b": 2, "c": 3}
 	delete(map5, "a")
 	fmt.Println(map5)
+
+	// 字面量
+	ages := map[string]int{
+		"alice":   31,
+		"charlie": 34,
+	}
+	fmt.Println(ages)
 }
