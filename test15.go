@@ -39,8 +39,9 @@ func main() {
 	man1 := new(Child)
 	man1.setAge(10)
 	man1.setName("kelly")
+	fmt.Println(*man1)
 	fmt.Println(man1.getName("little "), man1.getAge())
 
-	// man2 := Child{name: "wu", age: 8}
-	// fmt.Println(man2.getName(), man2.getAge())
+	man2 := Child{name: "wu", age: 8}
+	fmt.Println(man2.getName("big "), man2.getAge())
 }

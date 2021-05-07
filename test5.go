@@ -1,14 +1,16 @@
 package main
 
 import (
-    "fmt"
-    "math"
+	"fmt"
+	"math"
+	"time"
 )
+
 // var i, j int = 100, 60
 // var i, j = 100, 60
 var (
-    i int = 100
-    j int = 110
+	i int = 100
+	j int = 110
 )
 
 // 函数使用
@@ -21,28 +23,31 @@ func max(a int, b int) int {
 
 /* 声明函数变量 */
 var getSquareRoot = func(x float64) float64 {
-  return math.Sqrt(x)
+	return math.Sqrt(x)
 }
 
 // 闭包
 func getSequence() func() int {
-    i := 0
-    return func() int {
-        i += 1
-        return i  
-    }
+	i := 0
+	return func() int {
+		i += 1
+		return i
+	}
 }
 
-
 func main() {
-	println(max(i, j))
+	// println(max(i, j))
 
-    /* 使用函数 */
-    fmt.Println(getSquareRoot(9))
+	// /* 使用函数 */
+	// fmt.Println(getSquareRoot(9))
 
+	// nextNumber := getSequence()
 
-    nextNumber := getSequence()
+	// fmt.Println(nextNumber())
+	// fmt.Println(nextNumber())
 
-    fmt.Println(nextNumber())
-    fmt.Println(nextNumber())
+	time.AfterFunc(1*time.Second, func() {
+		fmt.Println("1 second")
+	})
+	// time.Sleep(10 * time.Second)
 }

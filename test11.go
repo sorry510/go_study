@@ -76,4 +76,12 @@ func main() {
 	w.Center.X = 100
 	w.Center.Y = 200
 	fmt.Println(w)
+
+	// 匿名结构体初始化
+	var closure = struct {
+		m string
+	}{
+		m: "hello",
+	}
+	fmt.Println(closure)
 }
