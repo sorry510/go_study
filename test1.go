@@ -5,5 +5,8 @@ import "fmt"
 // hello world
 
 func main() {
-   fmt.Println("Hello, World!")
+   var a, err = fmt.Println("Hello, World!")
+   println(a, err == nil)
+   
+   // fmt.Println(_)
 }
